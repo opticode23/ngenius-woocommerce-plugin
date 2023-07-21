@@ -18,7 +18,7 @@ class NgeniusGatewayRequestSale extends NgeniusGatewayRequestAbstract
      */
     public function get_build_array($order)
     {
-        $amount = strval($order->get_total() * 100);
+        $amount = strval($order->get_total());
         if ($order->get_currency() == "UGX") {
             $amount = $amount/100;
         }
